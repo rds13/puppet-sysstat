@@ -5,7 +5,7 @@
 This class installs sysstat, and takes care of setting up sar and sadc  
 to gather disk/io stats as well as CPU.  
 
-** Only tested on CentOS/RHEL5.  **  
+** Only tested on CentOS & Ubuntu  **  
 
 ### Parameters:  
 	$sardays	-	number of days to keep stats for.  
