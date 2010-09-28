@@ -2,7 +2,7 @@
 ##############################################################
 # @filename : init.pp
 # @created : 12 Feb 2010 09:05:47 +1100
-# @last changed: Tue 28 Sep 2010 21:47:42 EST
+# @last changed: Tue 28 Sep 2010 22:17:48 EST
 # @author : Mick Pollard <aussielunix@gmail.com>
 ##############################################################
 #
@@ -34,8 +34,6 @@ class sysstat {
     enable  => true,
     require => Package['sysstat']
   }
-
-  $sardays = 28
 
   case $operatingsystem {
     Ubuntu: { include sysstat::ubuntu }
