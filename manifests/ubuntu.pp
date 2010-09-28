@@ -2,7 +2,7 @@
 ##############################################################
 # @filename : ubuntu.pp
 # @created : Tue 28 Sep 2010 21:48:43 EST
-# @last changed: Tue 28 Sep 2010 22:22:44 EST
+# @last changed: Tue 28 Sep 2010 22:32:43 EST
 # @author : Mick Pollard <aussielunix@gmail.com>
 ##############################################################
 #
@@ -32,13 +32,13 @@ class sysstat::ubuntu {
 
   if $architecture == 'x86_64' {
     file { '/usr/lib64/sysstat/sa1':
-      content => template('ubuntu/sa1.sh.erb'),
+      content => template('sysstat/ubuntu/sa1.sh.erb'),
       mode    => '555',
       require => Package['sysstat']
     } 
   } else {
     file { '/usr/lib/sysstat/sa1':
-      content => template('ubuntu/sa1.sh.erb'),
+      content => template('sysstat/ubuntu/sa1.sh.erb'),
       mode    => '555',
       require => Package['sysstat']
     }
