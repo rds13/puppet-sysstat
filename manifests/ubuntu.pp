@@ -2,7 +2,7 @@
 ##############################################################
 # @filename : ubuntu.pp
 # @created : Tue 28 Sep 2010 21:48:43 EST
-# @last changed: Tue 28 Sep 2010 22:32:43 EST
+# @last changed: Fri 01 Oct 2010 21:08:34 EST
 # @author : Mick Pollard <aussielunix@gmail.com>
 ##############################################################
 #
@@ -22,7 +22,7 @@
 #
 class sysstat::ubuntu {
 
-  file { "/etc/defaults/sysstat":
+  file { "/etc/default/sysstat":
     owner   => root,
     group   => root,
     mode    => 444,
