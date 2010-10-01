@@ -12,7 +12,7 @@
 #
 # Parameters:
 #	$sardays	-	number of days to keep stats for.
-#				-	defaults to 28
+#			-	defaults to 28
 #
 # Actions:
 #  sets up the sysstat config files for Ubuntu

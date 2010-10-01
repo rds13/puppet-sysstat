@@ -2,7 +2,7 @@
 ##############################################################
 # @filename : init.pp
 # @created : 12 Feb 2010 09:05:47 +1100
-# @last changed: Tue 28 Sep 2010 22:17:48 EST
+# @last changed: Fri 01 Oct 2010 21:16:46 EST
 # @author : Mick Pollard <aussielunix@gmail.com>
 ##############################################################
 #
@@ -28,17 +28,18 @@ class sysstat {
   package { 'sysstat': 
     ensure => present 
   }
+
+  case $operatingsystem {
+      Ubuntu: { include sysstat::ubuntu }
+      centos: { include sysstat::centos }
+      default: { }
+  }
+
   # there is no process/daemon running here;
   # the init script just sets a counter at boot time
   service { 'sysstat':
     enable  => true,
     require => Package['sysstat']
-  }
-
-  case $operatingsystem {
-    Ubuntu: { include sysstat::ubuntu }
-    centos: { include sysstat::centos }
-    default: { }
   }
 }
 
